@@ -1,0 +1,94 @@
+/* Large Screen CSS */
+/* Your existing large screen CSS goes here */
+
+/* Small Screen CSS */
+@media screen and (max-width: 475px) {
+    header {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+        display: block; /* Resetting to block layout */
+    }
+
+    main figure {
+        margin: 0 auto 20px; /* Centering figures */
+        text-align: center; /* Centering images */
+    }
+    
+    /* Override grid-related properties */
+    main {
+        display: block; /* Resetting to block layout */
+    }
+
+
+
+
+/* Menu Code*/
+
+/* Styles for the hamburger menu */
+    #menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute; /* Positioning the hamburger menu */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 100; /* Ensure it's above other elements */
+    }
+
+    #menu::before {
+    content: "☰";
+    }
+
+    #menu.open::before {
+    content: "❎";
+    }
+
+    .navigation {
+    display: none; /* Hide navigation links by default */
+    }
+
+/* When the menu is open, display navigation links */
+    #menu.open + nav .navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    color: #fff;
+    position: absolute; /* Position the navigation below the hamburger menu */
+    top: 60px; /* Adjust as needed */
+    right: 0;
+    width: 100%;
+    z-index: 90; /* Ensure it's above other elements except the hamburger menu */
+    }
+
+    #menu.open + nav .navigation a {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s;
+    }
+
+    #menu.open + nav .navigation a:hover {
+    background-color: #555;
+    }
+}
+
+
+
+
+
